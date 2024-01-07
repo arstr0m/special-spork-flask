@@ -1,10 +1,5 @@
-from flask import Flask
+from pages import create_app
 
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return '¡Hola, mundo! Esta es mi primera página web con Flask.'
-
+app = create_app()
 if __name__ == '__main__':
     app.run(debug=True)
